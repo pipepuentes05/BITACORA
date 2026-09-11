@@ -1,0 +1,2085 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Felipe Puentes | Portafolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+/* ==========================================
+   CONFIGURACIÓN GENERAL
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+
+    --fondo: #07090d;
+    --fondo2: #0d1117;
+
+    --texto: #f4f7fb;
+    --gris: #8792a2;
+
+    --azul: #1479ff;
+    --celeste: #3bdcff;
+    --verde: #4cff9a;
+
+    --borde: rgba(255,255,255,0.08);
+}
+
+body {
+
+    font-family: "Inter", sans-serif;
+
+    background:
+    radial-gradient(
+        circle at 15% 15%,
+        rgba(0,119,255,0.18),
+        transparent 32%
+    ),
+
+    radial-gradient(
+        circle at 85% 80%,
+        rgba(32,255,163,0.10),
+        transparent 30%
+    ),
+
+    var(--fondo);
+
+    color: var(--texto);
+
+    overflow-x: hidden;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+img {
+    display: block;
+    width: 100%;
+}
+
+
+/* ==========================================
+   GRID DEL FONDO
+========================================== */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background-image:
+
+    linear-gradient(
+        rgba(255,255,255,0.025) 1px,
+        transparent 1px
+    ),
+
+    linear-gradient(
+        90deg,
+        rgba(255,255,255,0.025) 1px,
+        transparent 1px
+    );
+
+    background-size: 55px 55px;
+
+    pointer-events: none;
+
+    z-index: -2;
+}
+
+
+body::after {
+
+    content: "";
+
+    position: fixed;
+
+    width: 600px;
+    height: 600px;
+
+    right: -200px;
+    top: -200px;
+
+    background: var(--azul);
+
+    filter: blur(220px);
+
+    opacity: 0.16;
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+/* ==========================================
+   NAVEGACIÓN
+========================================== */
+
+nav {
+
+    position: fixed;
+
+    top: 18px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: calc(100% - 40px);
+    max-width: 1450px;
+
+    height: 66px;
+
+    padding: 0 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: rgba(8,12,18,0.75);
+
+    border: 1px solid var(--borde);
+
+    backdrop-filter: blur(24px);
+
+    border-radius: 18px;
+
+    z-index: 1000;
+}
+
+
+.logo {
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+}
+
+
+.logo span {
+    color: var(--azul);
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    gap: 30px;
+}
+
+
+.nav-links a {
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+
+    color: #7f8997;
+
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover {
+    color: var(--celeste);
+}
+
+
+.nav-number {
+
+    padding: 7px 12px;
+
+    border-radius: 100px;
+
+    border: 1px solid rgba(59,220,255,0.25);
+
+    background: rgba(59,220,255,0.05);
+
+    color: var(--celeste);
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+
+/* ==========================================
+   SECCIONES
+========================================== */
+
+section {
+
+    width: 100%;
+
+    min-height: 100vh;
+    min-height: 100svh;
+
+    padding: 120px 6vw 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+}
+
+
+/* ==========================================
+   PORTADA
+========================================== */
+
+.hero {
+
+    width: 100%;
+
+    max-width: 1450px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.4fr 0.6fr;
+
+    gap: 60px;
+
+    align-items: end;
+}
+
+
+.eyebrow {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 8px 12px;
+
+    margin-bottom: 25px;
+
+    border-radius: 100px;
+
+    background: rgba(20,121,255,0.08);
+
+    border: 1px solid rgba(20,121,255,0.25);
+
+    color: var(--celeste);
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+.eyebrow::before {
+
+    content: "";
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--verde);
+
+    box-shadow: 0 0 14px var(--verde);
+}
+
+
+.hero h1 {
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(70px,10vw,155px);
+
+    line-height: 0.80;
+
+    letter-spacing: -8px;
+
+    font-weight: 700;
+}
+
+
+.outline {
+
+    color: transparent;
+
+    -webkit-text-stroke: 1px rgba(59,220,255,0.65);
+}
+
+
+.hero-description {
+
+    margin-top: 40px;
+
+    max-width: 530px;
+
+    padding-left: 18px;
+
+    border-left: 2px solid var(--azul);
+
+    color: var(--gris);
+
+    font-size: 14px;
+
+    line-height: 1.85;
+}
+
+
+.hero-right {
+
+    display: flex;
+
+    justify-content: flex-end;
+}
+
+
+.scroll-button {
+
+    width: 145px;
+    height: 145px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 26px;
+
+    background: rgba(20,121,255,0.10);
+
+    border: 1px solid rgba(59,220,255,0.2);
+
+    color: var(--celeste);
+
+    font-size: 35px;
+
+    transition: 0.3s;
+}
+
+
+.scroll-button:hover {
+
+    background: var(--azul);
+
+    color: white;
+
+    transform: translateY(-8px) rotate(4deg);
+
+    box-shadow: 0 20px 60px rgba(20,121,255,0.3);
+}
+
+
+.hero-footer {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 6vw;
+    right: 6vw;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #4d5663;
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* ==========================================
+   PROYECTOS
+========================================== */
+
+.project-container {
+
+    width: 100%;
+
+    max-width: 1450px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 0.85fr 1.15fr;
+
+    gap: 7vw;
+
+    align-items: center;
+}
+
+
+.project-number {
+
+    display: inline-flex;
+
+    padding: 8px 12px;
+
+    margin-bottom: 25px;
+
+    border-radius: 8px;
+
+    background: rgba(76,255,154,0.06);
+
+    border: 1px solid rgba(76,255,154,0.2);
+
+    color: var(--verde);
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+.project-info h2 {
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(48px,6vw,90px);
+
+    line-height: 0.9;
+
+    letter-spacing: -5px;
+
+    margin-bottom: 28px;
+}
+
+
+.project-description {
+
+    max-width: 500px;
+
+    color: var(--gris);
+
+    font-size: 14px;
+
+    line-height: 1.85;
+}
+
+
+/* ==========================================
+   TAGS
+========================================== */
+
+.tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 25px;
+}
+
+
+.tag {
+
+    padding: 7px 12px;
+
+    border-radius: 7px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    background: rgba(255,255,255,0.025);
+
+    color: #8d98a8;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+/* ==========================================
+   BOTÓN
+========================================== */
+
+.button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+    padding: 15px 20px;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #1479ff,
+        #0068ec
+    );
+
+    color: white;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    box-shadow: 0 10px 35px rgba(20,121,255,0.22);
+
+    transition: 0.3s;
+}
+
+
+.button:hover {
+
+    transform: translateY(-4px);
+
+    gap: 25px;
+
+    box-shadow: 0 16px 45px rgba(20,121,255,0.4);
+}
+
+
+/* ==========================================
+   TARJETAS CLICKEABLES
+========================================== */
+
+.project-link {
+
+    display: block;
+
+    width: 100%;
+
+    border-radius: 24px;
+}
+
+
+.project-visual {
+
+    position: relative;
+
+    width: 100%;
+
+    height: min(70vh,700px);
+
+    min-height: 430px;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(18,24,34,0.95),
+        rgba(8,11,16,0.98)
+    );
+
+    border: 1px solid rgba(59,220,255,0.10);
+
+    box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+
+    cursor: pointer;
+
+    transition: 0.4s;
+}
+
+
+.project-visual:hover {
+
+    transform: translateY(-8px) scale(1.01);
+
+    border-color: rgba(59,220,255,0.35);
+
+    box-shadow:
+        0 35px 90px rgba(0,0,0,0.5),
+        0 0 50px rgba(20,121,255,0.12);
+}
+
+
+.project-visual img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.6s;
+}
+
+
+.project-visual:hover img {
+
+    transform: scale(1.05);
+}
+
+
+/* ==========================================
+   PLACEHOLDERS
+========================================== */
+
+.placeholder {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+
+    radial-gradient(
+        circle at 25% 20%,
+        rgba(20,121,255,0.22),
+        transparent 34%
+    ),
+
+    radial-gradient(
+        circle at 80% 80%,
+        rgba(76,255,154,0.08),
+        transparent 28%
+    );
+}
+
+
+.placeholder-icon {
+
+    width: 115px;
+    height: 115px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 24px;
+
+    border-radius: 25px;
+
+    background: rgba(20,121,255,0.08);
+
+    border: 1px solid rgba(59,220,255,0.16);
+
+    color: var(--celeste);
+
+    font-size: 55px;
+
+    box-shadow: 0 0 60px rgba(20,121,255,0.10);
+}
+
+
+.placeholder p {
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    color: #8995a5;
+}
+
+
+.placeholder small {
+
+    margin-top: 8px;
+
+    color: #4d5968;
+
+    font-size: 9px;
+}
+
+
+/* ==========================================
+   ALTERNAR
+========================================== */
+
+.reverse .project-info {
+    order: 2;
+}
+
+.reverse .project-link {
+    order: 1;
+}
+
+
+/* ==========================================
+   SOBRE MI
+========================================== */
+
+.about {
+
+    width: 100%;
+
+    max-width: 1450px;
+
+    margin: auto;
+}
+
+
+.about h2 {
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(65px,11vw,160px);
+
+    line-height: 0.80;
+
+    letter-spacing: -9px;
+}
+
+
+.about-grid {
+
+    margin-top: 80px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+}
+
+
+.about-main {
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(24px,3vw,40px);
+
+    line-height: 1.25;
+
+    letter-spacing: -1.5px;
+}
+
+
+.about-secondary {
+
+    padding: 25px;
+
+    border-radius: 16px;
+
+    background: rgba(255,255,255,0.025);
+
+    border: 1px solid rgba(255,255,255,0.07);
+
+    color: var(--gris);
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+
+    min-height: 75vh;
+
+    padding: 100px 6vw;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+
+.footer-small {
+
+    padding: 7px 12px;
+
+    border-radius: 100px;
+
+    border: 1px solid rgba(76,255,154,0.2);
+
+    background: rgba(76,255,154,0.05);
+
+    color: var(--verde);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+footer h2 {
+
+    margin-top: 20px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(60px,10vw,145px);
+
+    letter-spacing: -8px;
+
+    transition: 0.3s;
+}
+
+
+footer h2:hover {
+
+    color: var(--celeste);
+}
+
+
+.footer-info {
+
+    width: 100%;
+
+    max-width: 1450px;
+
+    margin-top: 100px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255,255,255,0.07);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #4d5663;
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* ==========================================
+   ANIMACIONES
+========================================== */
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+
+.reveal.visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media(max-width:900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    section {
+
+        padding-left: 25px;
+
+        padding-right: 25px;
+    }
+
+    .hero {
+
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+
+        letter-spacing: -5px;
+    }
+
+    .hero-right {
+
+        justify-content: flex-start;
+    }
+
+    .scroll-button {
+
+        width: 100px;
+
+        height: 100px;
+    }
+
+    .project-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .reverse .project-info {
+        order: 1;
+    }
+
+    .reverse .project-link {
+        order: 2;
+    }
+
+    .project-visual {
+
+        height: 55vh;
+    }
+
+    .about-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+}
+
+
+/* ==========================================
+   CELULAR
+========================================== */
+
+@media(max-width:550px) {
+
+    section {
+
+        min-height: auto;
+
+        padding-top: 120px;
+
+        padding-bottom: 80px;
+    }
+
+    #inicio {
+
+        min-height: 100svh;
+    }
+
+    .hero h1 {
+
+        font-size: 18vw;
+
+        letter-spacing: -3px;
+    }
+
+    .hero-description {
+
+        font-size: 13px;
+    }
+
+    .hero-footer {
+
+        left: 25px;
+
+        right: 25px;
+    }
+
+    .hero-footer span:last-child {
+
+        display: none;
+    }
+
+    .project-info h2 {
+
+        font-size: 13vw;
+
+        letter-spacing: -2px;
+    }
+
+    .project-visual {
+
+        height: 48vh;
+
+        min-height: 330px;
+    }
+
+    .about h2 {
+
+        font-size: 18vw;
+
+        letter-spacing: -4px;
+    }
+
+    footer {
+
+        min-height: 60vh;
+
+        padding-left: 25px;
+
+        padding-right: 25px;
+    }
+
+    .footer-info {
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================================
+     NAVEGACIÓN
+========================================== -->
+
+<nav>
+
+    <a href="#inicio" class="logo">
+
+        FP<span>°</span>
+
+    </a>
+
+
+    <div class="nav-links">
+
+        <a href="#proyecto1">
+            Proyectos
+        </a>
+
+        <a href="#sobre-mi">
+            Sobre mí
+        </a>
+
+        <a href="#contacto">
+            Contacto
+        </a>
+
+    </div>
+
+
+    <div class="nav-number">
+
+        PORTFOLIO 2026
+
+    </div>
+
+</nav>
+
+
+
+<!-- ==========================================
+     INICIO
+========================================== -->
+
+<section id="inicio">
+
+    <div class="hero">
+
+        <div>
+
+            <div class="eyebrow">
+
+                Portafolio · Ingeniería en Diseño
+
+            </div>
+
+
+            <h1>
+
+                FELIPE
+
+                <br>
+
+                <span class="outline">
+
+                    PUENTES
+
+                </span>
+
+            </h1>
+
+
+            <p class="hero-description">
+
+                Una exploración de interfaces,
+                sonido, programación e interacción digital.
+
+                Este portafolio reúne proyectos donde
+                el diseño y la tecnología se convierten
+                en experiencias visuales e interactivas.
+
+            </p>
+
+        </div>
+
+
+        <div class="hero-right">
+
+            <a
+                href="#proyecto1"
+                class="scroll-button">
+
+                ↓
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-footer">
+
+        <span>
+            Santiago · Chile
+        </span>
+
+        <span>
+            Diseño · Tecnología · Interacción
+        </span>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     PROYECTO 1
+========================================== -->
+
+<section id="proyecto1">
+
+    <div class="project-container">
+
+
+        <div class="project-info reveal">
+
+
+            <div class="project-number">
+
+                01 / INTERFAZ
+
+            </div>
+
+
+            <h2>
+
+                LÁMINA DE
+
+                <br>
+
+                INTERFAZ
+
+            </h2>
+
+
+            <p class="project-description">
+
+                Análisis visual de una interfaz cotidiana
+                para comprender cómo las personas interactúan
+                con objetos y sistemas.
+
+                <br><br>
+
+                El proyecto estudia entradas, salidas,
+                jerarquías de información y decisiones
+                de diseño.
+
+            </p>
+
+
+            <div class="tags">
+
+                <span class="tag">
+                    Interfaces
+                </span>
+
+                <span class="tag">
+                    Diseño
+                </span>
+
+                <span class="tag">
+                    Análisis
+                </span>
+
+                <span class="tag">
+                    Visual
+                </span>
+
+            </div>
+
+
+            <!-- CAMBIA LINK_PROYECTO_1 -->
+
+            <a
+                href="https://pipepuentes05.github.io/LAMINA-DE-INTERFAZ/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button">
+
+                VER PROYECTO ↗
+
+            </a>
+
+        </div>
+
+
+        <!-- CAMBIA LINK_PROYECTO_1 -->
+
+        <a
+            href="https://pipepuentes05.github.io/LAMINA-DE-INTERFAZ/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link reveal">
+
+
+            <div class="project-visual">
+
+
+                <div class="placeholder">
+
+
+                    <div class="placeholder-icon">
+
+                        ◫
+
+                    </div>
+
+
+                    <p>
+
+                        Lámina de interfaz
+
+                    </p>
+
+
+                    <small>
+
+                        Click para ver proyecto ↗
+
+                    </small>
+
+
+                </div>
+
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     PROYECTO 2
+========================================== -->
+
+<section
+    id="proyecto2"
+    class="reverse">
+
+
+    <div class="project-container">
+
+
+        <div class="project-info reveal">
+
+
+            <div class="project-number">
+
+                02 / AUDIO + INTERACCIÓN
+
+            </div>
+
+
+            <h2>
+
+                JUEGO DE
+
+                <br>
+
+                AUDIOS
+
+            </h2>
+
+
+            <p class="project-description">
+
+                Experiencia web interactiva basada
+                en reconocimiento musical.
+
+                <br><br>
+
+                El usuario escucha distintos audios
+                y debe identificar correctamente
+                al artista.
+
+                El proyecto combina diseño,
+                programación web, interacción
+                y sonido.
+
+            </p>
+
+
+            <div class="tags">
+
+                <span class="tag">
+                    HTML
+                </span>
+
+                <span class="tag">
+                    CSS
+                </span>
+
+                <span class="tag">
+                    JavaScript
+                </span>
+
+                <span class="tag">
+                    Audio
+                </span>
+
+            </div>
+
+
+            <!-- CAMBIA LINK_PROYECTO_2 -->
+
+            <a
+                href="https://pipepuentes05.github.io/ADIVINA-EL-CANTANTE/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button">
+
+                ABRIR JUEGO ↗
+
+            </a>
+
+        </div>
+
+
+        <!-- CAMBIA LINK_PROYECTO_2 -->
+
+        <a
+            href="https://pipepuentes05.github.io/ADIVINA-EL-CANTANTE/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link reveal">
+
+
+            <div class="project-visual">
+
+
+                <div class="placeholder">
+
+
+                    <div class="placeholder-icon">
+
+                        ♫
+
+                    </div>
+
+
+                    <p>
+
+                        Juego musical
+
+                    </p>
+
+
+                    <small>
+
+                        Click para jugar ↗
+
+                    </small>
+
+
+                </div>
+
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     PROYECTO 3
+========================================== -->
+
+<section id="proyecto3">
+
+
+    <div class="project-container">
+
+
+        <div class="project-info reveal">
+
+
+            <div class="project-number">
+
+                03 / SOUND DESIGN
+
+            </div>
+
+
+            <h2>
+
+                SYNTH
+
+                <br>
+
+                MAX
+
+            </h2>
+
+
+            <p class="project-description">
+
+                Desarrollo de un sintetizador digital
+                utilizando Max.
+
+                <br><br>
+
+                El proyecto explora generación de sonido,
+                secuencias MIDI, ondas, frecuencias,
+                filtros y modificaciones de audio.
+
+            </p>
+
+
+            <div class="tags">
+
+                <span class="tag">
+                    Max
+                </span>
+
+                <span class="tag">
+                    MIDI
+                </span>
+
+                <span class="tag">
+                    Synth
+                </span>
+
+                <span class="tag">
+                    Sound Design
+                </span>
+
+            </div>
+
+
+            <!-- CAMBIA LINK_PROYECTO_3 -->
+
+            <a
+                href="https://pipepuentes05.github.io/transcriptor-de-voz-a-texto/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button">
+
+                VER PROYECTO ↗
+
+            </a>
+
+        </div>
+
+
+        <!-- CAMBIA LINK_PROYECTO_3 -->
+
+        <a
+            href="https://pipepuentes05.github.io/transcriptor-de-voz-a-texto/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link reveal">
+
+
+            <div class="project-visual">
+
+
+                <div class="placeholder">
+
+
+                    <div class="placeholder-icon">
+
+                        ≋
+
+                    </div>
+
+
+                    <p>
+
+                        Sintetizador Max
+
+                    </p>
+
+
+                    <small>
+
+                        Click para ver proyecto ↗
+
+                    </small>
+
+
+                </div>
+
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     PROYECTO 4
+========================================== -->
+
+<section
+    id="proyecto4"
+    class="reverse">
+
+
+    <div class="project-container">
+
+
+        <div class="project-info reveal">
+
+
+            <div class="project-number">
+
+                04 / EXPERIMENTACIÓN
+
+            </div>
+
+
+            <h2>
+
+                SONIFICACIÓN
+
+                <br>
+
+                DE IMAGEN
+
+            </h2>
+
+
+            <p class="project-description">
+
+                Experiencia web experimental que
+                transforma información visual en sonido.
+
+                <br><br>
+
+                La aplicación analiza los valores RGB
+                de los píxeles de una imagen y los
+                transforma en características sonoras.
+
+                <br><br>
+
+                De esta manera, una imagen deja de ser
+                solamente visual y también puede escucharse.
+
+            </p>
+
+
+            <div class="tags">
+
+                <span class="tag">
+                    RGB
+                </span>
+
+                <span class="tag">
+                    JavaScript
+                </span>
+
+                <span class="tag">
+                    Web Audio
+                </span>
+
+                <span class="tag">
+                    Sonificación
+                </span>
+
+            </div>
+
+
+            <!-- CAMBIA LINK_PROYECTO_4 -->
+
+            <a
+                href="https://pipepuentes05.github.io/SONIFICACION-DE-IMAGEN/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button">
+
+                ABRIR EXPERIENCIA ↗
+
+            </a>
+
+        </div>
+
+
+        <!-- CAMBIA LINK_PROYECTO_4 -->
+
+        <a
+            href="https://pipepuentes05.github.io/SONIFICACION-DE-IMAGEN/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link reveal">
+
+
+            <div class="project-visual">
+
+
+                <div class="placeholder">
+
+
+                    <div class="placeholder-icon">
+
+                        ◉
+
+                    </div>
+
+
+                    <p>
+
+                        Sonificación de imagen
+
+                    </p>
+
+
+                    <small>
+
+                        Click para experimentar ↗
+
+                    </small>
+
+
+                </div>
+
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     PROYECTO 5
+========================================== -->
+
+<section id="proyecto5">
+
+    <div class="project-container">
+
+
+        <div class="project-info reveal">
+
+
+            <div class="project-number">
+
+                05 / PROYECTO AUDIOVISUAL
+
+            </div>
+
+
+            <h2>
+
+                PROYECTO
+
+                <br>
+
+                INTERACTIVO
+
+            </h2>
+
+
+            <p class="project-description">
+
+                Registro audiovisual del desarrollo y
+                resultado final de una experiencia interactiva.
+
+                <br><br>
+
+                El video presenta el proceso creativo, la
+                experimentación y el funcionamiento del proyecto,
+                combinando diseño, tecnología, imagen y sonido.
+
+            </p>
+
+
+            <div class="tags">
+
+                <span class="tag">
+                    Video
+                </span>
+
+                <span class="tag">
+                    Interacción
+                </span>
+
+                <span class="tag">
+                    Diseño
+                </span>
+
+                <span class="tag">
+                    Audiovisual
+                </span>
+
+            </div>
+
+
+            <a
+                href="https://www.youtube.com/watch?v=2lSsNh3nFrE"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button">
+
+                VER VIDEO EN YOUTUBE ↗
+
+            </a>
+
+        </div>
+
+
+        <a
+            href="https://www.youtube.com/watch?v=2lSsNh3nFrE"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link reveal">
+
+
+            <div class="project-visual">
+
+                <img
+                    src="https://img.youtube.com/vi/2lSsNh3nFrE/maxresdefault.jpg"
+                    alt="Miniatura del quinto proyecto en YouTube">
+
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     SOBRE MI
+========================================== -->
+
+<section id="sobre-mi">
+
+
+    <div class="about reveal">
+
+
+        <div class="eyebrow">
+
+            Perfil
+
+        </div>
+
+
+        <h2>
+
+            SOBRE
+
+            <br>
+
+            <span class="outline">
+
+                MÍ
+
+            </span>
+
+        </h2>
+
+
+        <div class="about-grid">
+
+
+            <p class="about-main">
+
+                Me interesa crear experiencias donde
+                el diseño, la tecnología y la interacción
+                se conecten para generar nuevas formas
+                de comunicación.
+
+            </p>
+
+
+            <p class="about-secondary">
+
+                Soy Felipe Puentes, estudiante
+                de Ingeniería en Diseño.
+
+                <br><br>
+
+                Este portafolio reúne una selección
+                de proyectos desarrollados a través
+                de la experimentación con interfaces,
+                programación, sonido y medios digitales.
+
+                <br><br>
+
+                Me interesa explorar cómo las personas
+                interactúan con objetos, productos,
+                sistemas y experiencias digitales.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     CONTACTO
+========================================== -->
+
+<footer id="contacto">
+
+
+    <p class="footer-small">
+
+        Contacto
+
+    </p>
+
+
+    <!-- CAMBIA EL CORREO -->
+
+    <a href="mailto:correo@ejemplo.com">
+
+
+        <h2>
+
+            HABLEMOS ↗
+
+        </h2>
+
+
+    </a>
+
+
+    <div class="footer-info">
+
+
+        <span>
+
+            Felipe Puentes
+
+        </span>
+
+
+        <span>
+
+            Ingeniería en Diseño
+
+        </span>
+
+
+        <span>
+
+            Portfolio © 2026
+
+        </span>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- ==========================================
+     JAVASCRIPT
+========================================== -->
+
+<script>
+
+
+/* ANIMACIONES */
+
+const elementos =
+document.querySelectorAll(".reveal");
+
+
+const observer =
+new IntersectionObserver(
+
+    (entries) => {
+
+        entries.forEach(
+
+            (entry) => {
+
+                if(entry.isIntersecting) {
+
+                    entry.target
+                    .classList
+                    .add("visible");
+
+                }
+
+            }
+
+        );
+
+    },
+
+    {
+        threshold: 0.15
+    }
+
+);
+
+
+elementos.forEach(
+
+    (elemento) => {
+
+        observer.observe(elemento);
+
+    }
+
+);
+
+
+
+/* NAVBAR */
+
+const nav =
+document.querySelector("nav");
+
+
+window.addEventListener(
+
+    "scroll",
+
+    () => {
+
+        if(window.scrollY > 50) {
+
+            nav.style.background =
+            "rgba(8,12,18,0.92)";
+
+        }
+
+        else {
+
+            nav.style.background =
+            "rgba(8,12,18,0.75)";
+
+        }
+
+    }
+
+);
+
+
+</script>
+
+
+</body>
+
+</html>
